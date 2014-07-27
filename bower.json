@@ -1,0 +1,22 @@
+{
+  "name": "SPAHomework",
+  "version": "0.0.0",
+  "homepage": "other",
+  "authors": [
+    "Some guy"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "sammy": "~0.7.5",
+    "q": "1.0.1",
+    "jquery": "~2.1.1"
+  }
+}
