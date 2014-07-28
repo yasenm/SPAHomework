@@ -5,11 +5,12 @@
             "q": "../libs/q/q",
             "sammy": "../libs/sammy/lib/sammy",
             "requester": "./requester",
-            "renderer": "./renderer"
+            "renderer": "./renderer",
+            "controller": "./controller"
         }
     });
 
-    require(["jquery", "q", "requester", "renderer", "sammy"], function($, Q, requester, renderer, sammy){
+    require(["jquery", "q", "requester", "renderer", "sammy", "controller"], function($, Q, requester, renderer, sammy, controller){
         var spa = sammy('#content', function(){
 
             this.get('#/info', function(){
@@ -19,8 +20,7 @@
             this.get('#/chat', function(){
                 $('#content').load('partials/chat.html', function(){
                     $('#send-msg').on('click', function() {
-                        alert('BUTTON!');
-                        var msg = renderer.getMsg();
+                        var msg = controller.getMsg();
                         requester.postData(msg);
                     });
                 });
